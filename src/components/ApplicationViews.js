@@ -11,7 +11,7 @@ class ApplicationViews extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
@@ -27,7 +27,7 @@ class ApplicationViews extends Component {
                 <Route path="/owners" render={(props) => {
                     return <OwnerCard />
                 }} />
-            </React.Fragment>
+            </>
         )
     }
 }

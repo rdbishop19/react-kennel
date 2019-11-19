@@ -4,17 +4,24 @@ import './LocationDetail.css';
 
 class LocationDetail extends Component {
 	state = {
-        location: ""
-    };
+		location: '',
+		loadingStatus: true
+	};
 
 	componentDidMount() {
 		console.log('LocationDetail: componentDidMount');
-		ApiManager.get(this.props.locationId, "locations").then((location) => {
-            this.setState({
-                name: location.name
-            })
-        });
+		ApiManager.get(this.props.locationId, 'locations').then((location) => {
+			this.setState({
+				name: location.name,
+				loadingStatus: false
+			});
+		});
 	}
+
+	handleDelete = () => {
+		this.setState({ loadingStatus: true });
+		ApiManager.delete(this.props.locationId, 'locations').then(() => this.props.history.push('/locations'));
+	};
 
 	render() {
 		return (
@@ -23,6 +30,9 @@ class LocationDetail extends Component {
 					<h3>
 						Location: <span className="card-locationname">{this.state.name}</span>
 					</h3>
+					<button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>
+						Close Location
+					</button>
 				</div>
 			</div>
 		);

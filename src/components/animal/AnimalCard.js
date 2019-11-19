@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import OwnerCard from '../owner/OwnerCard';
-import LocationCard from '../location/LocationCard';
+import "./Animal.css"
 
 class AnimalCard extends Component {
   render() {
@@ -10,10 +9,9 @@ class AnimalCard extends Component {
           <picture>
             <img src={require('./dog.svg')} alt="My Dog" />
           </picture>
-          <h3>Name: <span className="card-petname">Doodles</span></h3>
-          <p>Breed: Poodle</p>
-          <OwnerCard />
-          <LocationCard />
+          <h3>Name: <span className="card-petname">{this.props.animal.name}</span></h3>
+          <p>Breed: {this.props.animal.breed}</p>
+          <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
         </div>
       </div>
     );

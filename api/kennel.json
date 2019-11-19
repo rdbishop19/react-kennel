@@ -1,58 +1,46 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "employeeId": 1
-        },
-        {
-            "id": 2,
-            "name": "Decker",
-            "breed": "German Sheperd",
-            "employeeId": 2
-        },
-        {
-            "id": 3,
-            "name": "Esme",
-            "breed": "Pitbull",
-            "employeeId": 1
-        }
-    ],
-    "owners": [
-        {
-            "id": 1,
-            "phoneNumber": "555-555-2193",
-            "name": "Jim Halpert"
-        },
-        {
-            "id": 2,
-            "phoneNumber": "555-555-7702",
-            "name": "Pam Beesley"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Michael Scott"
-        },
-        {
-            "id": 2,
-            "name": "Dwight Schrute"
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Puppy Palace"
-        },
-        {
-            "id": 2,
-            "name": "Nate's Doghouse"
-        },
-        {
-            "id": 3,
-            "name": "Woof Love"
-        }        
-    ]
+  "animals": [
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "employeeId": 2
+    }
+  ],
+  "owners": [
+    {
+        "id": 1,
+        "phoneNumber": "555-555-2193",
+        "name": "Jim Halpert"
+    },
+    {
+        "id": 2,
+        "phoneNumber": "555-555-7702",
+        "name": "Pam Beesley"
+    }
+],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Michael Scott"
+    },
+    {
+      "id": 2,
+      "name": "Dwight Schrute"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Puppy Palace"
+    },
+    {
+      "id": 2,
+      "name": "Nate's Doghouse"
+    },
+    {
+      "id": 3,
+      "name": "Woof Love"
+    }
+  ]
 }

@@ -32,7 +32,7 @@ class AnimalList extends Component {
 			<>
 				<section className="section-content">
 					<button type="button"
-						className="btn"
+						className="btn btn-success"
 						onClick={() => {this.props.history.push("/animals/new")}}>
 							Admit Animal
 						</button>

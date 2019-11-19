@@ -17,6 +17,24 @@
         "name": "Esme",
         "breed": "Pitbull",
         "employeeId": 1
+    },
+    {
+        "id": 4,
+        "name": "Hampton",
+        "breed": "Pit Mix",
+        "employeeId": 1
+    },
+    {
+        "id": 5,
+        "name": "Lady",
+        "breed": "Dalmation",
+        "employeeId": 2
+    },
+    {
+        "id": 6,
+        "name": "Pixie",
+        "breed": "Teacup Chihuahua",
+        "employeeId": 1
     }
 ],
   "owners": [

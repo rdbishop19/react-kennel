@@ -1,12 +1,24 @@
 {
   "animals": [
     {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "employeeId": 2
+        "id": 1,
+        "name": "Doodles",
+        "breed": "Poodle",
+        "employeeId": 1
+    },
+    {
+        "id": 2,
+        "name": "Decker",
+        "breed": "German Sheperd",
+        "employeeId": 2
+    },
+    {
+        "id": 3,
+        "name": "Esme",
+        "breed": "Pitbull",
+        "employeeId": 1
     }
-  ],
+],
   "owners": [
     {
         "id": 1,

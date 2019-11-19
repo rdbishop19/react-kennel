@@ -1,54 +1,64 @@
 {
   "animals": [
     {
-        "id": 1,
-        "name": "Doodles",
-        "breed": "Poodle",
-        "employeeId": 1
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "employeeId": 1
     },
     {
-        "id": 2,
-        "name": "Decker",
-        "breed": "German Sheperd",
-        "employeeId": 2
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "employeeId": 2
     },
     {
-        "id": 3,
-        "name": "Esme",
-        "breed": "Pitbull",
-        "employeeId": 1
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "employeeId": 1
     },
     {
-        "id": 4,
-        "name": "Hampton",
-        "breed": "Pit Mix",
-        "employeeId": 1
+      "id": 4,
+      "name": "Hampton",
+      "breed": "Pit Mix",
+      "employeeId": 1
     },
     {
-        "id": 5,
-        "name": "Lady",
-        "breed": "Dalmation",
-        "employeeId": 2
+      "id": 5,
+      "name": "Lady",
+      "breed": "Dalmation",
+      "employeeId": 2
     },
     {
-        "id": 6,
-        "name": "Pixie",
-        "breed": "Teacup Chihuahua",
-        "employeeId": 1
+      "id": 6,
+      "name": "Pixie",
+      "breed": "Teacup Chihuahua",
+      "employeeId": 1
+    },
+    {
+      "name": "Terry",
+      "breed": "Pug",
+      "id": 7
+    },
+    {
+      "name": "Bear",
+      "breed": "Cocker Spaniel",
+      "id": 8
     }
-],
+  ],
   "owners": [
     {
-        "id": 1,
-        "phoneNumber": "555-555-2193",
-        "name": "Jim Halpert"
+      "id": 1,
+      "phoneNumber": "555-555-2193",
+      "name": "Jim Halpert"
     },
     {
-        "id": 2,
-        "phoneNumber": "555-555-7702",
-        "name": "Pam Beesley"
+      "id": 2,
+      "phoneNumber": "555-555-7702",
+      "name": "Pam Beesley"
     }
-],
+  ],
   "employees": [
     {
       "id": 1,

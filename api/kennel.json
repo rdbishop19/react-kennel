@@ -9,26 +9,26 @@
   ],
   "owners": [
     {
-      "id": 1,
-      "phoneNumber": "555-555-2193",
-      "name": "Jim Halpert"
-    },
-    {
-      "id": 2,
-      "phoneNumber": "555-555-7702",
-      "name": "Pam Beesley"
-    }
-  ],
-  "employees": [
-    {
         "id": 1,
-        "name": "Michael Scott"
+        "phoneNumber": "555-555-2193",
+        "name": "Jim Halpert"
     },
     {
         "id": 2,
-        "name": "Dwight Schrute"
+        "phoneNumber": "555-555-7702",
+        "name": "Pam Beesley"
     }
 ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Michael Scott"
+    },
+    {
+      "id": 2,
+      "name": "Dwight Schrute"
+    }
+  ],
   "locations": [
     {
       "id": 1,

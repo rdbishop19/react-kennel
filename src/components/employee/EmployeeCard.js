@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Employee.css"
 
 class EmployeeCard extends Component {
 	render() {
@@ -6,9 +7,8 @@ class EmployeeCard extends Component {
 			<div className="card">
 				<div className="card-content">
 					<h3>
-						Employee Name: <span className="card-employeename">Mickey</span>
+						Employee Name: <span className="card-employeename">{this.props.employee.name}</span>
 					</h3>
-					<p>Position: Trainer</p>
 				</div>
 			</div>
 		);

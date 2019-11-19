@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Location.css"
 
 class LocationCard extends Component {
     render() {
@@ -6,7 +7,7 @@ class LocationCard extends Component {
             <div className="card">
 				<div className="card-content">
 					<h3>
-						Location Name: <span className="card-locationname">Gallatin, TN</span>
+						Location: <span className="card-locationname">{this.props.location.name}</span>
 					</h3>
 				</div>
 			</div>

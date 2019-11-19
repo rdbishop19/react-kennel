@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import './Owner.css';
 
 class OwnerCard extends Component {
 	render() {
 		return (
-			<div>
-				<h3>
-					Owner Name: <span className="card-ownername">Jim</span>
-				</h3>
+			<div className="card">
+				<div className="card-content">
+					<h3>
+						Owner: <span className="card-ownername">{this.props.owner.name}</span>
+					</h3>
+				</div>
 			</div>
 		);
 	}

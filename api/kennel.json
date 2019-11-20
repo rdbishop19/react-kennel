@@ -107,16 +107,16 @@
   ],
   "locations": [
     {
-        "id": 1,
-        "name": "Puppy Palace"
+      "id": 1,
+      "name": "Puppy Palace"
     },
     {
-        "id": 2,
-        "name": "Nate's Doghouse"
+      "id": 2,
+      "name": "Nate's Doghouse"
     },
     {
-        "id": 3,
-        "name": "Woof Love"
-    }        
-]
+      "id": 3,
+      "name": "Woof Love"
+    }
+  ]
 }

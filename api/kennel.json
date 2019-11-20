@@ -67,6 +67,42 @@
     {
       "id": 2,
       "name": "Dwight Schrute"
+    },
+    {
+      "name": "Santa Paws",
+      "id": 3
+    },
+    {
+      "name": "David Rossi",
+      "id": 4
+    },
+    {
+      "name": "Spencer Reid",
+      "id": 5
+    },
+    {
+      "name": "Aaron Hotchner",
+      "id": 6
+    },
+    {
+      "name": "Penelope Garcia",
+      "id": 7
+    },
+    {
+      "name": "Derek Morgan",
+      "id": 8
+    },
+    {
+      "name": "Zoe Hart",
+      "id": 9
+    },
+    {
+      "name": "Jennifer Jareau",
+      "id": 10
+    },
+    {
+      "name": "Elliot Anderson",
+      "id": 11
     }
   ],
   "locations": [

@@ -27,15 +27,23 @@ class LocationList extends Component {
 
 	render() {
 		return (
-			<div className="container-cards">
-				{this.state.locations.map((location) => 
-					<LocationCard
-						key={location.id}
-						location={location}
-						deleteLocation={this.deleteLocation}
-					/>
-				)}
-			</div>
+			<>
+				<section className="section-content">
+					<button className="btn btn-success"
+					onClick={() => this.props.history.push("/locations/new")}>
+						Add Location
+					</button>
+				</section>
+				<div className="container-cards">
+					{this.state.locations.map((location) => 
+						<LocationCard
+							key={location.id}
+							location={location}
+							deleteLocation={this.deleteLocation}
+						/>
+					)}
+				</div>
+			</>
 		);
 	}
 }

@@ -1,50 +1,32 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "employeeId": 1
-    },
-    {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "employeeId": 2
-    },
-    {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
-      "employeeId": 1
+      "employeeId": 1,
+      "ownerId": 1
     },
     {
       "id": 4,
       "name": "Hampton",
       "breed": "Pit Mix",
-      "employeeId": 1
+      "employeeId": 2,
+      "ownerId": 1
     },
     {
       "id": 5,
       "name": "Lady",
       "breed": "Dalmation",
-      "employeeId": 2
+      "employeeId": 2,
+      "ownerId": 1
     },
     {
       "id": 6,
       "name": "Pixie",
       "breed": "Teacup Chihuahua",
-      "employeeId": 1
-    },
-    {
-      "name": "Terry",
-      "breed": "Pug",
-      "id": 7
-    },
-    {
-      "name": "Bear",
-      "breed": "Cocker Spaniel",
-      "id": 8
+      "employeeId": 11,
+      "ownerId": 1
     }
   ],
   "owners": [
@@ -67,38 +49,6 @@
     {
       "id": 2,
       "name": "Dwight Schrute"
-    },
-    {
-      "name": "Santa Paws",
-      "id": 3
-    },
-    {
-      "name": "David Rossi",
-      "id": 4
-    },
-    {
-      "name": "Spencer Reid",
-      "id": 5
-    },
-    {
-      "name": "Aaron Hotchner",
-      "id": 6
-    },
-    {
-      "name": "Penelope Garcia",
-      "id": 7
-    },
-    {
-      "name": "Derek Morgan",
-      "id": 8
-    },
-    {
-      "name": "Zoe Hart",
-      "id": 9
-    },
-    {
-      "name": "Jennifer Jareau",
-      "id": 10
     },
     {
       "name": "Elliot Anderson",

@@ -14,6 +14,7 @@ import LocationForm from './location/LocationForm'
 import OwnerForm from './owner/OwnerForm'
 import Login from './auth/Login'
 import AnimalEditForm from "./animal/AnimalEditForm"
+import EmployeeEditForm from './employee/EmployeeEditform'
 
 class ApplicationViews extends Component {
 
@@ -26,6 +27,8 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
+
+
                 <Route exact path="/animals" render={(props) => {
                     return this.isAuthenticated() ?
                         <AnimalList {...props}/> :
@@ -41,6 +44,8 @@ class ApplicationViews extends Component {
                 <Route path="/animals/:animalId(\d+)/edit" render={props => {
                     return <AnimalEditForm {...props} />
                 }} />
+
+
                 <Route exact path="/locations" render={(props) => {
                     return this.isAuthenticated() ?
                         <LocationList {...props}/> :
@@ -52,6 +57,8 @@ class ApplicationViews extends Component {
                 <Route path="/locations/new" render={(props) => {
                     return <LocationForm {...props} />
                 }}/>
+
+
                 <Route exact path="/employees" render={(props) => {
                     return this.isAuthenticated() ? 
                         <EmployeeList {...props}/> : 
@@ -60,6 +67,11 @@ class ApplicationViews extends Component {
                 <Route path="/employees/new" render={(props) => {
                     return <EmployeeForm {...props} />
                 }} />
+                <Route path="/employees/:employeeId(\d+)/edit" render={ props => {
+                    return <EmployeeEditForm {...props} />
+                }} />
+
+
                 <Route exact path="/owners" render={(props) => {
                     return this.isAuthenticated() ?
                         <OwnerList {...props}/> :

@@ -21,13 +21,13 @@ export default {
             body: JSON.stringify(newObject)
         }).then(data => data.json())
     },
-    update(editedAnimal, endpoint) {
-        return fetch(`${remoteURL}/${endpoint}/${editedAnimal.id}`, {
+    update(editedObj, endpoint) {
+        return fetch(`${remoteURL}/${endpoint}/${editedObj.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(editedAnimal)
+          body: JSON.stringify(editedObj)
         }).then(data => data.json());
       }
 };

@@ -30,7 +30,7 @@ class LocationList extends Component {
 			<>
 				<section className="section-content">
 					<button className="btn btn-success"
-					onClick={() => this.props.history.push("/locations/new")}>
+					onClick={() => {this.props.history.push("/locations/new")}}>
 						Add Location
 					</button>
 				</section>
@@ -38,8 +38,9 @@ class LocationList extends Component {
 					{this.state.locations.map((location) => 
 						<LocationCard
 							key={location.id}
-							location={location}
+							kennelLocation={location}
 							deleteLocation={this.deleteLocation}
+							{...this.props}
 						/>
 					)}
 				</div>

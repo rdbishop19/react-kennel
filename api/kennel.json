@@ -1,32 +1,16 @@
 {
   "animals": [
     {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "employeeId": 1,
-      "ownerId": 1
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "employeeId": 1
     },
     {
-      "id": 4,
-      "name": "Hampton",
-      "breed": "Pit Mix",
-      "employeeId": 2,
-      "ownerId": 1
-    },
-    {
-      "id": 5,
-      "name": "Lady",
-      "breed": "Dalmation",
-      "employeeId": 2,
-      "ownerId": 1
-    },
-    {
-      "id": 6,
-      "name": "Pixie",
-      "breed": "Teacup Chihuahua",
-      "employeeId": 11,
-      "ownerId": 1
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "employeeId": 1
     }
   ],
   "owners": [

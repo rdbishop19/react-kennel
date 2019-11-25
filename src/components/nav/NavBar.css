@@ -41,5 +41,6 @@ nav .selectedLink {
 	border: 2px solid #333;
 	border-radius: 5px;
 	background-color:  hsl(219, 82%, 55%);
-	color: white
+	color: aquamarine !important;
+	font-weight: bolder;
 }

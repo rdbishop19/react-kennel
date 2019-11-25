@@ -6,7 +6,7 @@ class AnimalDetail extends Component {
 	state = {
 		name: '',
 		breed: '',
-		loadingStatus: true,
+		loadingStatus: true
 	};
 
 	componentDidMount() {
@@ -25,7 +25,7 @@ class AnimalDetail extends Component {
 		//invoke the delete function in AnimalManager and re-direct to the animalList
 		this.setState({ loadingStatus: true });
 		ApiManager.delete(this.props.animalId, 'animals').then(() => this.props.history.push('/animals'));
-	}
+	};
 
 	render() {
 		return (

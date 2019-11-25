@@ -17,7 +17,7 @@ import AnimalEditForm from "./animal/AnimalEditForm"
 import EmployeeEditForm from './employee/EmployeeEditform'
 import LocationEditForm from './location/LocationEditForm'
 import OwnerEditForm from './owner/OwnerEditForm'
-
+import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
 class ApplicationViews extends Component {
 
     isAuthenticated = () => localStorage.getItem("credentials") !== null
@@ -73,6 +73,9 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/employees/:employeeId(\d+)/edit" render={ props => {
                     return <EmployeeEditForm {...props} />
+                }} />
+                 <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+                    return <EmployeeWithAnimals {...props} />
                 }} />
 
 

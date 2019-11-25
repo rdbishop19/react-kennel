@@ -7,7 +7,9 @@ class AnimalEditForm extends Component {
     state = {
       animalName: "",
       breed: "",
+      employeeId: "",
       loadingStatus: true,
+      employees: []
     };
 
     handleFieldChange = evt => {
@@ -22,7 +24,8 @@ class AnimalEditForm extends Component {
       const editedAnimal = {
         id: this.props.match.params.animalId,
         name: this.state.animalName,
-        breed: this.state.breed
+        breed: this.state.breed,
+        employeeId: Number(this.state.employeeId),
       };
 
       ApiManager.update(editedAnimal, "animals")
@@ -35,9 +38,13 @@ class AnimalEditForm extends Component {
           this.setState({
             animalName: animal.name,
             breed: animal.breed,
+            employeeId: animal.employeeId,
             loadingStatus: false,
           });
       });
+
+      ApiManager.getAll("employees")
+      .then(employees => this.setState({ employees: employees }))
     }
 
     render() {
@@ -66,6 +73,21 @@ class AnimalEditForm extends Component {
               />
               <label htmlFor="breed">Breed</label>
             </div>
+
+            <br/>
+            <label htmlFor="employeeId">Employee name:</label>
+            <select
+              className="form-control"
+              id="employeeId"
+              value={this.state.employeeId}
+              onChange={this.handleFieldChange}
+            >
+              {this.state.employees.map(employee =>
+                <option key={employee.id} value={employee.id}>
+                  {employee.name}
+                </option>
+              )}
+            </select>
             <div className="alignRight">
               <button
                 type="button" disabled={this.state.loadingStatus}

@@ -11,42 +11,6 @@
       "name": "Decker",
       "breed": "German Sheperd",
       "employeeId": 1
-    },
-    {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "employeeId": 5
-    },
-    {
-      "id": 4,
-      "name": "Hampton",
-      "breed": "Pit Mix",
-      "employeeId": 6
-    },
-    {
-      "id": 5,
-      "name": "Lady",
-      "breed": "Dalmation",
-      "employeeId": 3
-    },
-    {
-      "id": 6,
-      "name": "Pixie",
-      "breed": "Teacup Chihuahua",
-      "employeeId": 5
-    },
-    {
-      "id": 7,
-      "name": "Terryyy",
-      "breed": "Pug",
-      "employeeId": 6
-    },
-    {
-      "name": "Bear",
-      "breed": "Cocker Spaniel",
-      "id": 8,
-      "employeeId": 3
     }
   ],
   "owners": [
@@ -69,38 +33,6 @@
     {
       "id": 2,
       "name": "Dwight Schrute"
-    },
-    {
-      "name": "Santa Paws",
-      "id": 3
-    },
-    {
-      "name": "David Rossi",
-      "id": 4
-    },
-    {
-      "name": "Spencer Reid",
-      "id": 5
-    },
-    {
-      "name": "Aaron Hotchner",
-      "id": 6
-    },
-    {
-      "name": "Penelope Garcia",
-      "id": 7
-    },
-    {
-      "name": "Derek Morgan",
-      "id": 8
-    },
-    {
-      "name": "Zoe Hart",
-      "id": 9
-    },
-    {
-      "name": "Jennifer Jareau",
-      "id": 10
     },
     {
       "name": "Elliot Anderson",

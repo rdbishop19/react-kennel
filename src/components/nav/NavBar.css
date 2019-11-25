@@ -25,7 +25,7 @@ nav .container li {
 	font-size: 1.5em;
 	color: cornsilk;
 	box-sizing: border-box;
-	background-color: cornflowerblue;
+	background-color: hsl(219, 79%, 66%);
 	list-style-type: none;
 }
 
@@ -35,4 +35,12 @@ nav .container a {
 
 nav .container a:hover {
 	color: maroon;
+}
+
+nav .selectedLink {
+	border: 2px solid #333;
+	border-radius: 5px;
+	background-color:  hsl(219, 82%, 55%);
+	color: aquamarine !important;
+	font-weight: bolder;
 }

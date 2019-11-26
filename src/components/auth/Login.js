@@ -14,13 +14,10 @@ class Login extends Component {
 
     handleLogin = e => {
         e.preventDefault()
-        localStorage.setItem(
-            "credentials",
-            JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
-            })
-        )
+        this.props.setUser({
+            email: this.state.email,
+            password: this.state.password
+        })
         this.props.history.push("/");
     }
 

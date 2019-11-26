@@ -33,8 +33,9 @@ nav .container a {
 	color: cornsilk;
 }
 
-nav .container a:hover {
+nav .container a:hover, span:hover {
 	color: maroon;
+	cursor: pointer;
 }
 
 nav .selectedLink {

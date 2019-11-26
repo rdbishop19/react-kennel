@@ -30,9 +30,9 @@ class LocationDetail extends Component {
 					<h3>
 						Location: <span className="card-locationname">{this.state.name}</span>
 					</h3>
-					<button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>
+					{this.props.user && <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>
 						Close Location
-					</button>
+					</button>}
 				</div>
 			</div>
 		);

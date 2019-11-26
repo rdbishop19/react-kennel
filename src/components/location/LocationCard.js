@@ -13,14 +13,18 @@ class LocationCard extends Component {
 					<Link to={`/locations/${this.props.kennelLocation.id}`}>
 						<button>Details</button>
 					</Link>
-					<button type="button" onClick={() => {
-						this.props.history.push(`/locations/${this.props.kennelLocation.id}/edit`)
-					}} >
-						Edit
-					</button>
-					<button type="button" onClick={() => this.props.deleteLocation(this.props.kennelLocation.id)}>
-						Remove
-					</button>
+					{this.props.user && 
+						<>
+							<button type="button" onClick={() => {
+								this.props.history.push(`/locations/${this.props.kennelLocation.id}/edit`)
+							}}>
+								Edit
+							</button>
+							<button type="button" onClick={() => this.props.deleteLocation(this.props.kennelLocation.id)}>
+								Remove
+							</button>
+						</>
+					}
 				</div>
 			</div>
 		);

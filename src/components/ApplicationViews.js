@@ -19,20 +19,20 @@ import LocationEditForm from './location/LocationEditForm'
 import OwnerEditForm from './owner/OwnerEditForm'
 import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
 class ApplicationViews extends Component {
-
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
     
     render() {
         return (
             <>
-                <Route path="/login" component={Login} />
+                <Route path="/login" render={props => {
+                    return <Login setUser={this.props.setUser} {...props} />
+                }} />
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
 
 
                 <Route exact path="/animals" render={(props) => {
-                    return this.isAuthenticated() ?
+                    return this.props.user ?
                         <AnimalList {...props}/> :
                         <Redirect to="/login" />
                 }} />
@@ -49,9 +49,7 @@ class ApplicationViews extends Component {
 
 
                 <Route exact path="/locations" render={(props) => {
-                    return this.isAuthenticated() ?
-                        <LocationList {...props}/> :
-                        <Redirect to="/login" />
+                    return <LocationList {...props}/>
                 }} />
                 <Route exact path="/locations/:locationId(\d+)" render={(props) => {
                     return <LocationDetail locationId={parseInt(props.match.params.locationId)}{...props} />
@@ -64,7 +62,7 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/employees" render={(props) => {
-                    return this.isAuthenticated() ? 
+                    return this.props.user ? 
                         <EmployeeList {...props}/> : 
                         <Redirect to="/login" />
                 }} />
@@ -80,7 +78,7 @@ class ApplicationViews extends Component {
 
 
                 <Route exact path="/owners" render={(props) => {
-                    return this.isAuthenticated() ?
+                    return this.props.user ?
                         <OwnerList {...props}/> :
                         <Redirect to="/login" />
                 }} />

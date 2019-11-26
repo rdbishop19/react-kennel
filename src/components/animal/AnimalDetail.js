@@ -6,17 +6,20 @@ class AnimalDetail extends Component {
 	state = {
 		name: '',
 		breed: '',
+		employee: '',
 		loadingStatus: true
 	};
 
 	componentDidMount() {
 		console.log('AnimalDetail: ComponentDidMount');
 		//get(id) from ApiManager and hang on to the data; save into state
-		ApiManager.get(this.props.animalId, 'animals').then((animal) => {
+		const employeeInfo = "?_expand=employee"
+		ApiManager.get(this.props.animalId, 'animals', employeeInfo).then((animal) => {
 			this.setState({
 				name: animal.name,
 				breed: animal.breed,
-				loadingStatus: false
+				employee: animal.employee ? animal.employee.name : "none assigned",
+				loadingStatus: false,
 			});
 		});
 	}
@@ -38,6 +41,7 @@ class AnimalDetail extends Component {
 						Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span>
 					</h3>
 					<p>Breed: {this.state.breed}</p>
+					<p>Employee: {this.state.employee}</p>
 					<button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>
 						Discharge
 					</button>

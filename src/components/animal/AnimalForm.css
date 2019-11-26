@@ -51,7 +51,8 @@ fieldset .formgrid {
 }
 
 fieldset input,
-fieldset button {
+fieldset button,
+fieldset select {
 	grid-column: 2 /4;
 	width: auto;
 	margin: 0;
@@ -59,4 +60,11 @@ fieldset button {
 
 fieldset .alignRight {
 	text-align: right;
+}
+
+fieldset select {
+	padding: 5px;
+	margin: .3em 0;
+	outline: none;
+	box-shadow: none;
 }

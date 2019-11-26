@@ -20,7 +20,7 @@ class AnimalCard extends Component {
 						}} >
 						Edit
 					</button>
-          <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
+          {this.props.deleteAnimal && <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>}
         </div>
       </div>
     );

@@ -4,9 +4,11 @@ import ApplicationViews from './ApplicationViews'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Kennel.css'
+import ApiManager from '../modules/ApiManager';
 class Kennel extends Component {
     state = {
-      user: false
+      user: false,
+      searchTerm: "",
     }
 
     // Check if credentials are in local storage
@@ -27,6 +29,10 @@ class Kennel extends Component {
       });
     }
 
+    searchForTerm = () => {
+      
+    }
+
     clearUser = () => {
         // localStorage.clear()
         localStorage.removeItem("credentials")
@@ -45,7 +51,8 @@ class Kennel extends Component {
         <NavBar user={this.state.user} 
                 clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
-                          setUser={this.setUser} />
+                          setUser={this.setUser}
+                          searchTerm={this.searchTerm} />
       </>
     )
   }

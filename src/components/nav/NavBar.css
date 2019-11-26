@@ -45,3 +45,7 @@ nav .selectedLink {
 	color: aquamarine !important;
 	font-weight: bolder;
 }
+
+nav > input {
+	width: 600px;
+}

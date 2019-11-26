@@ -18,6 +18,7 @@ import EmployeeEditForm from './employee/EmployeeEditform'
 import LocationEditForm from './location/LocationEditForm'
 import OwnerEditForm from './owner/OwnerEditForm'
 import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
+import SearchResults from './search/SearchResults'
 class ApplicationViews extends Component {
     
     render() {
@@ -87,6 +88,10 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/owners/:ownerId(\d+)/edit" render={(props) => {
                     return <OwnerEditForm {...props} />
+                }} />
+
+                <Route path="/search/q=:searchTerm" render={(props) => {
+                    return <SearchResults {...props} />
                 }} />
             </>
         )

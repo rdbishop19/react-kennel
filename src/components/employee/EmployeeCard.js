@@ -9,6 +9,7 @@ class EmployeeCard extends Component {
 					<h3>
 						Employee Name: <span className="card-employeename">{this.props.employee.name}</span>
 					</h3>
+					<p>Location: <span className="card-employeename">{this.props.employee.location.name}</span></p>
 				<button type="button" 
 					onClick={() => {this.props.history.push(`/employees/${this.props.employee.id}/edit`);
 				}} >

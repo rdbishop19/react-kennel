@@ -64,15 +64,38 @@
   "employees": [
     {
       "id": 1,
-      "name": "Michael Scott"
+      "name": "Michael Scott",
+      "locationId": 1
     },
     {
       "id": 2,
+      "locationId": 2,
       "name": "Dwight Schrute"
     },
     {
-      "name": "Elliot Anderson",
-      "id": 11
+      "id": 11,
+      "locationId": 1,
+      "name": "Elliot Anderson"
+    },
+    {
+      "name": "Blaine Wiley",
+      "locationId": 1,
+      "id": 12
+    },
+    {
+      "name": "Sylvester Figueroa",
+      "locationId": 1,
+      "id": 13
+    },
+    {
+      "name": "Kiayada Oneal",
+      "locationId": 2,
+      "id": 14
+    },
+    {
+      "name": "Acton Davis",
+      "locationId": "2",
+      "id": 15
     }
   ],
   "locations": [

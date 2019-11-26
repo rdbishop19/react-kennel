@@ -10,7 +10,7 @@ class EmployeeList extends Component {
 	componentDidMount() {
 		console.log('EMPLOYEE LIST: ComponentDidMount');
 		//getAll from ApiManager and hang on to that data;
-		ApiManager.getAll('employees').then((employees) => {
+		ApiManager.getAll('employees?_expand=location').then((employees) => {
 			this.setState({
 				employees: employees
 			});

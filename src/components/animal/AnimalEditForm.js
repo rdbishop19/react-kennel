@@ -74,20 +74,22 @@ class AnimalEditForm extends Component {
               <label htmlFor="breed">Breed</label>
             </div>
 
-            <br/>
-            <label htmlFor="employeeId">Employee name:</label>
-            <select
-              className="form-control"
-              id="employeeId"
-              value={this.state.employeeId}
-              onChange={this.handleFieldChange}
-            >
-              {this.state.employees.map(employee =>
-                <option key={employee.id} value={employee.id}>
-                  {employee.name}
-                </option>
-              )}
-            </select>
+            <div className="formgrid">
+              <label htmlFor="employeeId">Employee name:</label>
+              <select
+                className="form-control"
+                id="employeeId"
+                value={this.state.employeeId}
+                onChange={this.handleFieldChange}
+              > 
+                <option key={0} value=""></option>
+                {this.state.employees.map(employee =>
+                  <option key={employee.id} value={employee.id}>
+                    {employee.name}
+                  </option>
+                )}
+              </select>
+            </div>
             <div className="alignRight">
               <button
                 type="button" disabled={this.state.loadingStatus}

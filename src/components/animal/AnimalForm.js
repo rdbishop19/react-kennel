@@ -7,6 +7,8 @@ class AnimalForm extends Component {
         animalName: "",
         breed: "",
         loadingStatus: false,
+        employees: [],
+        employeeId: "",
     };
 
     handleFieldChange = evt => {
@@ -15,6 +17,12 @@ class AnimalForm extends Component {
         this.setState(stateToChange)
     };
 
+    componentDidMount(){
+        ApiManager.getAll("employees")
+        .then((employees) => {
+            this.setState({ employees: employees })
+        })
+    }
     /* Local method for validation, set loadingStatus, crate animal */
     constructNewAnimal = evt => {
         evt.preventDefault();
@@ -25,6 +33,7 @@ class AnimalForm extends Component {
             const animal = {
                 name: this.state.animalName,
                 breed: this.state.breed,
+                employeeId: this.state.employeeId ? Number(this.state.employeeId) : "",
             };
 
             // Create the animal and redirect the user to animal list
@@ -56,6 +65,16 @@ class AnimalForm extends Component {
                         placeholder="Breed"
                         />
                         <label htmlFor="breed">Breed</label>
+                    </div>
+                    <div className="formgrid">
+                        <label htmlFor="employeeId">Employee:</label>
+                        <select id="employeeId" onChange={this.handleFieldChange}>
+                            <option key={0} value=""></option>
+                            {this.state.employees.map(employee =>
+                            <option key={employee.id} value={employee.id}>{employee.name}</option>
+                            )}
+                    </select>
+
                     </div>
                     <div className="alignRight">
                         <button

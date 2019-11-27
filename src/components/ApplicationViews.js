@@ -22,6 +22,7 @@ import SearchResults from './search/SearchResults'
 class ApplicationViews extends Component {
     
     render() {
+        console.log('app', this.props)
         return (
             <>
                 <Route path="/login" render={props => {
@@ -50,7 +51,8 @@ class ApplicationViews extends Component {
 
 
                 <Route exact path="/locations" render={(props) => {
-                    return <LocationList {...props}/>
+                    console.log("route props", props)
+                    return <LocationList {...props} user={this.props.user} />
                 }} />
                 <Route exact path="/locations/:locationId(\d+)" render={(props) => {
                     return <LocationDetail locationId={parseInt(props.match.params.locationId)}{...props} />

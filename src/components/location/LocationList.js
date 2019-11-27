@@ -26,14 +26,16 @@ class LocationList extends Component {
 	};
 
 	render() {
+		console.log('locationList props', this.props)
+
 		return (
 			<>
-				<section className="section-content">
+				{this.props.user && <section className="section-content">
 					<button className="btn btn-success"
 					onClick={() => {this.props.history.push("/locations/new")}}>
 						Add Location
 					</button>
-				</section>
+				</section>}
 				<div className="container-cards">
 					{this.state.locations.map((location) => 
 						<LocationCard

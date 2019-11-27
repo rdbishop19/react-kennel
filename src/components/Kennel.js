@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import NavBar from './nav/NavBar'
 import ApplicationViews from './ApplicationViews'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Kennel.css'
-import ApiManager from '../modules/ApiManager';
 class Kennel extends Component {
     state = {
       user: false,
-      searchTerm: "",
+      mounted: false,
     }
 
     // Check if credentials are in local storage
@@ -29,10 +30,6 @@ class Kennel extends Component {
       });
     }
 
-    searchForTerm = () => {
-      
-    }
-
     clearUser = () => {
         // localStorage.clear()
         localStorage.removeItem("credentials")
@@ -41,7 +38,8 @@ class Kennel extends Component {
     
     componentDidMount(){
       this.setState({
-        user: this.isAuthenticated()
+        user: this.isAuthenticated(),
+        mounted: true,
       })
     }
 
@@ -50,9 +48,16 @@ class Kennel extends Component {
       <>
         <NavBar user={this.state.user} 
                 clearUser={this.clearUser} />
-        <ApplicationViews user={this.state.user}
-                          setUser={this.setUser}
-                          searchTerm={this.searchTerm} />
+        {
+          this.state.mounted ? 
+          
+          <ApplicationViews user={this.state.user} setUser={this.setUser} /> : 
+
+          <div className="loading">
+            <br/>
+            <FontAwesomeIcon icon={faSpinner} spin size="5x"/>
+          </div>
+        }
       </>
     )
   }

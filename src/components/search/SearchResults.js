@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ApiManager from '../../modules/ApiManager';
 import { SearchResultCard } from './SearchResultCard';
+import './SearchResultCard.css'
 
 function SearchResults(props) {
 	const [ locations, setLocations ] = useState([]);
@@ -26,41 +27,49 @@ function SearchResults(props) {
 	useEffect(getSearchResults, [ searchTerm ]);
 
 	return (
-		<React.Fragment>
+		<div className="center">
 			<h2>Search Results</h2>
 			<h3>Animals</h3>
-			{animals.length ? (
-				animals.map((result) => {
-                    return <SearchResultCard key={result.id} path="animals" item={result} {...props} />
-				})
-			) : (
-				<p>No results</p>
-			)}
-			<h3>Locations</h3>
-			{locations.length ? (
-				locations.map((result) => {
-                    return <SearchResultCard key={result.id} path="locations" item={result} {...props} />
-				})
-			) : (
-				<p>No results</p>
-			)}
-			<h3>Employees</h3>
-			{employees.length ? (
-				employees.map((result) => {
-                    return <SearchResultCard key={result.id} path="employees" item={result} {...props} />
-				})
-			) : (
-				<p>No results</p>
-			)}
-			<h3>Owners</h3>
-			{owners.length ? (
-				owners.map((result) => {
-                    return <SearchResultCard key={result.id} path="owners" item={result} {...props} />
-				})
-			) : (
-				<p>No results</p>
-			)}
-		</React.Fragment>
+            <div className="results-box">
+                {animals.length ? (
+                    animals.map((result) => {
+                        return <SearchResultCard key={result.id} path="animals" item={result} {...props} />
+                    })
+                ) : (
+                    <p>No results</p>
+                    )}
+            </div>
+            <h3>Locations</h3>
+            <div className="results-box">
+                {locations.length ? (
+                    locations.map((result) => {
+                        return <SearchResultCard key={result.id} path="locations" item={result} {...props} />
+                    })
+                ) : (
+                    <p>No results</p>
+                )}
+            </div>
+            <h3>Employees</h3>
+            <div className="results-box">
+                {employees.length ? (
+                    employees.map((result) => {
+                        return <SearchResultCard key={result.id} path="employees" item={result} {...props} />
+                    })
+                ) : (
+                    <p>No results</p>
+                )}
+            </div>
+            <h3>Owners</h3>
+            <div className="results-box">
+                {owners.length ? (
+                    owners.map((result) => {
+                        return <SearchResultCard key={result.id} path="owners" item={result} {...props} />
+                    })
+                ) : (
+                    <p>No results</p>
+                )}
+            </div>
+		</div>
 	);
 }
 

@@ -91,7 +91,9 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route path="/search/q=:searchTerm" render={(props) => {
-                    return <SearchResults {...props} />
+                    return this.props.user ?
+                        <SearchResults {...props} /> :
+                        <Redirect to="/login" />
                 }} />
             </>
         )

@@ -9,8 +9,11 @@ class NavBar extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        // console.log('searchTerm', this.state.searchTerm)
-        this.props.history.push(`/search/q=${this.state.searchTerm}`)
+        const keyPressed = e.keyCode
+        // user hits 'Enter' key
+        if (keyPressed === 13){
+            this.props.history.push(`/search/q=${this.state.searchTerm}`)
+        }
     }
 
     handleFieldChange = evt => {
@@ -31,13 +34,12 @@ class NavBar extends Component {
                     <small>Loving care when you're not there.</small>
                 </h1>
                 <nav>
-                    <form onSubmit={this.handleSubmit}>
-                        <input className="form-control"
-                                id="searchTerm"
-                                placeholder="search"
-                                onChange={this.handleFieldChange}
-                            />
-                    </form>
+                    {this.props.user && <input className="nav-search"
+                        id="searchTerm"
+                        placeholder="search"
+                        onChange={this.handleFieldChange}
+                        onKeyUp={this.handleSubmit}
+                    />}
                     <ul className="container">
                         <li><NavLink activeClassName="selectedLink" className="nav-link" to="/" exact>Home</NavLink></li>
                         <li><NavLink activeClassName="selectedLink" className="nav-link" to="/locations">Locations</NavLink></li>

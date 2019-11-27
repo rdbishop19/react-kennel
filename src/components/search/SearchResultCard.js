@@ -9,10 +9,11 @@ export function SearchResultCard(props){
         props.history.push(`/${path}/${id}`)
     }
     return(
-        <div className="card-container">
+        <div className="search-card center">
             <p>Name: {name}</p>
             {breed && <p>Breed: {breed}</p>}
-            <button type="button" onClick={handleClick}>Details</button>
+            <button type="button" className="btn btn-primary" onClick={handleClick}>Details</button>
+        
         </div>
     )
 }

@@ -49,3 +49,13 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.center {
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}

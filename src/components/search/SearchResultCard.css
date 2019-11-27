@@ -1,0 +1,19 @@
+.search-card {
+    background-color: seashell;
+    border: 2px solid grey;
+    width: 200px;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.results-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
